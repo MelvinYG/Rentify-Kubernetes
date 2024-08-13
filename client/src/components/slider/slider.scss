@@ -1,0 +1,97 @@
+@import '../../responsive.scss';
+
+.slider {
+    display: flex;
+    gap: 15px;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    .fullscreen-img {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000c6;
+        overflow: hidden;
+        z-index: 2000;
+
+        .full-img {
+            height: 100%;
+            width: 80%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            @include sm {
+                height: 50%;
+            }
+        }
+
+        .arrow-btn {
+            color: white;
+            font-size: 3rem;
+            transition: all 0.4s ease;
+
+            &:hover {
+                scale: 1.05;
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 3vh;
+            right: 2vw;
+            color: white;
+            font-size: 3rem;
+            transition: all 0.4s ease;
+
+            &:hover {
+                scale: 1.05;
+            }
+        }
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .big-img {
+        flex: 3;
+    }
+
+    .small-imgs {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+
+        img {
+            height: 100px;
+
+            @include sm {
+                width: 100px;
+            }
+        }
+
+        @include sm {
+            flex-direction: row;
+            justify-content: start;
+        }
+    }
+}

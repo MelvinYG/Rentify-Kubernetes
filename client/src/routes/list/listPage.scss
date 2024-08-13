@@ -1,0 +1,43 @@
+@import '../../responsive.scss';
+
+.list-page {
+    display: flex;
+    height: calc(100vh - 100px);
+
+    .list-container {
+        flex: 3;
+        height: 100%;
+        
+        .wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: rgb(54, 55, 57) white;
+            padding-bottom: 50px;
+            padding-right: 20px;
+            
+            @include sm{
+                padding-bottom: 100px;
+            }
+            .card-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+
+    .map-container {
+        flex: 2;
+        display: flex;
+        background-color: #cdc7e5;
+
+
+        @include md {
+            display: none;
+        }
+    }
+}

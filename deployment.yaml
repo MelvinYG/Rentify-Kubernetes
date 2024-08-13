@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rentify-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rentify-app
+  template:
+    metadata:
+      labels:
+        app: rentify-app
+    spec:
+      containers:
+        - name: rentify-app
+          image: rentify-app:latest
+          ports:
+            - containerPort: 8080

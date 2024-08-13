@@ -1,0 +1,148 @@
+@import '../../responsive.scss';
+
+.navbar {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        transition: all 0.4s ease;
+
+        @include sm {
+            display: none;
+        }
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    .navbar-left {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                height: 30px;
+                width: 30px;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: bold;
+
+                @include md {
+                    display: none;
+                }
+
+                @include sm {
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    .navbar-right {
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #cdc7e5;
+        height: 100%;
+
+        @include md {
+            background-color: transparent;
+        }
+
+        .profile-container{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .user-info{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding-right: 10px;
+
+                span{
+                    @include sm{
+                        display: none;
+                    }
+                }
+            }
+
+            img{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+            }
+        }
+
+        .btn {
+            background-color: #ffd131;
+        }
+
+        .menu-btn {
+            display: none;
+
+            @include sm {
+                display: block;
+            }
+        }
+
+        a {
+            padding: 10px 20px;
+            margin: 20px;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 50%;
+            background-color: black;
+            color: white;
+            transition: all 1s ease;
+            font-size: 20px;
+            z-index: 1999;
+
+            &.active {
+                right: 0;
+            }
+
+            .close-btn {
+                display: flex;
+                justify-content: center;
+                margin: 40px 20px;
+                margin-left: 60%;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    @include sm{
+        a{
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+}

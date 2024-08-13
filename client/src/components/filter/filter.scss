@@ -1,0 +1,68 @@
+@import '../../responsive.scss';
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        input {
+            width: 98%;
+            flex: 1;
+            outline: none;
+            padding: 10px 5px;
+            border: 1px solid #444;
+
+            @include sm {
+                width: 98%;
+                border: 1px solid #444;
+            }
+        }
+
+        .location {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .other-filters {
+            display: flex;
+            gap: 10px;
+
+            @include md{
+                flex-direction: column;
+            }
+
+            > *{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .search-icon {
+        padding: 10px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffd131;
+        cursor: pointer;
+
+        @include sm {
+            width: 98%;
+            border: 1px solid #444;
+        }
+
+        span {
+            display: none;
+
+            @include sm {
+                display: block;
+            }
+        }
+    }
+}

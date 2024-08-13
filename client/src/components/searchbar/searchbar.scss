@@ -1,0 +1,54 @@
+@import '../../responsive.scss';
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    
+    form{
+        display: flex;
+        align-items: center;
+        border: 1px solid #444;
+        width: 100%;
+
+        @include sm{
+            flex-direction: column;
+            border: none;
+            gap: 10px;
+        }
+
+        input{
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px 5px;
+            border-right: 1px solid #444 ;
+
+            @include sm{
+                width: 98%;
+                border: 1px solid #444;
+            }
+        }
+
+        .search-icon{
+            padding: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffd131;
+
+            @include sm{
+                width: 98%;
+                border: 1px solid #444;
+            }
+
+            span{
+                display: none;
+
+                @include sm{
+                    display: block;
+                }
+            }
+        }
+    }
+}

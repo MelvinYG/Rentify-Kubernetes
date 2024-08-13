@@ -1,0 +1,75 @@
+@import '../../responsive.scss';
+
+.card {
+    display: flex;
+    gap: 20px;
+
+    .card-img {
+        flex: 2;
+        height: 200px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    .text-container {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include md{
+            flex:1;
+            justify-content: start;
+            gap: 10px;
+        }
+
+        .title{
+            font-size: 20px;
+            font-weight: bold;
+            color: #444;
+            transition: all 0.4s ease;
+            
+            &:hover{
+                scale: 1.01;
+                color: #000;
+            }
+        }
+
+        .location{
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .price{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            
+        }
+
+        .features{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            span{
+                display: flex;
+                align-items: center;
+                background-color: whitesmoke;
+                padding: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    @include md {
+        flex-direction: column;
+    }
+}

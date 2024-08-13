@@ -1,0 +1,19 @@
+.message-box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+
+    img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+    }
+
+    .name{
+        font-weight: bold;
+    }
+}
